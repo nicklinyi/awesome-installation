@@ -1,35 +1,82 @@
 # Awesome Installation
 
-## 本地构建
-项目主页用静态网站引擎 [Hugo](https://gohugo.io/) 构建。
-1.  安装 Hugo
-    Hugo 具有跨平台、易安装的特点。
+## Requirements ##
 
-    对于Linux & Windows 用户，直接到 [Release](https://github.com/spf13/hugo/releases) 页面下载平台对应的安装包，解压得到一个二进制文件，即可使用。
+* Hexo >= 3.0
+* [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) >= 0.0.8 (optional)
 
-2.  下载源码
-  ```
-  $ git clone https://github.com/nicklinyi/awesome-installation.git
-  $ cd awesome-installation
-  ```
+## Install ##
 
-3.  更新源码
-  ```
-  $ git pull
-  ```
+1) install theme:
 
-4.  本地查看网页效果
+``` sh
+$ git clone https://github.com/wzpan/hexo-theme-wixo.git themes/wixo
+```
 
-    终端执行 `hugo server` 然后浏览器打开 `localhost:1313` 即可。
+2) install [hexo-generator-search](https://github.com/paichyperiondev/hexo-generator-search):
 
-## 贡献
+``` sh
+$ npm install hexo-generator-search --save
+```
 
-Feel free to update this content, just click the Edit this page link displayed on top right of each page, and pull request it.
+3) install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) (optional):
 
-### push to master
+``` sh
+$ npm install hexo-tag-bootstrap --save
+```
 
-    git add . && git commit -m "update " && git push origin master
+## Enable ##
 
-### push to gh-pages
+Modify `theme` setting in your `_config.yml` to `wixo`.
 
-    git subtree push --prefix public origin gh-pages
+## Update ##
+
+``` sh
+$ cd themes/wixo
+$ git pull
+```
+
+## Configuration ##
+
+```
+rss: atom.xml
+fancybox: true
+favicon: favicon.png
+inverse_sort: false
+fold: true
+google_analytics:
+scratch_name: Scratch
+search:
+  path: search.xml
+  field: all
+```
+
+* **rss** - RSS link
+* **fancybox** - enable [Fancybox](http://fancyapps.com/fancybox/)
+* **inverse_sort** - whether to sort all notes inversely. By default wixo will sort all notes chronologically.
+* **fold** - whether to fold all the notebooks
+* **google_analytics** - Google Analytics ID
+* **scratch_name** - Notebook name of posts without categories variables
+
+## Front-Matter ##
+
+* **toc** - renders a table of contents
+
+For example:
+
+```
+title: Tag Plugins
+date: 2014-03-16 10:17:16
+categories: Docs
+toc: true
+---
+```
+
+## License ##
+
+This theme is provided under [MIT License](http://opensource.org/licenses/MIT).
+
+## Credits ##
+
+* The theme is built based on [Twitter-Bootstrap 3.1.1](getbootstrap.com/3.1.1/);
+* The beautiful icons are from [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/).
