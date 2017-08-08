@@ -18,10 +18,10 @@ toc: true
 
 安装TOY2DAC需要MUMPS来进行大型稀疏矩阵的LU分解，而MUMPS又要安装METIS或者SCOTCH，同时，编译MUMPS来依赖 SCALAPACK, BLACKS, LAPACK 三个依赖库文件，好在这些都在Intel的MKL库中集成，因此实际上只需要安装Intel编译器，MPI，METIS，MUMPS。这几个软件的安装可参考如下链接：
 
--Intel编译器: <http://seisman.info/intel-non-commercial-software.html>
--MPI库: <http://seisman.info/linux-environment-for-seismology-research.html>
--METIS: <https://nicklinyi.github.io/blog/2016/05/metis.html>
--MUMPS: <https://nicklinyi.github.io/blog/2016/05/mumps.html>
+- Intel编译器: <http://seisman.info/intel-non-commercial-software.html>
+- MPI库: <http://seisman.info/linux-environment-for-seismology-research.html>
+- METIS: <https://nicklinyi.github.io/blog/2016/05/metis.html>
+- MUMPS: <https://nicklinyi.github.io/blog/2016/05/mumps.html>
 
 
 ### 修改Makefile.inc
