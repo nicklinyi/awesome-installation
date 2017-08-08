@@ -29,7 +29,7 @@ $ sudo apt-get install swig
 $ sudo apt-get install python-dev
 $ sudo apt-get install python-numpy
 $ sudo apt-get install g++
-$ sudo aot-get install gfortran
+$ sudo apt-get install gfortran
 $ sudo apt-get install libopenmpi-dev
 $ sudo apt-get install libfftw3-dev
 $ sudo apt-get install libsuitesparse-dev
