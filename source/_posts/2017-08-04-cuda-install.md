@@ -1,11 +1,13 @@
 ---
-title: Cuda
-date: 2017-08-4 12:47:24
+title: CUDA
+date: 2017-08-04 12:47:24
 author: Nick
 categories: 高性能计算
 tags: [GPU, Cuda, Ubuntu]
 toc: true
 ---
+
+本文介绍如何在 Ubuntu 16.04 LTS 上安装 CUDA-8.0 。
 
 ## 下载
 下载之前首先确定自己的电脑的显卡为Nvidia的显卡。其次是查询自己电脑的操作系统。
@@ -212,6 +214,6 @@ Result = PASS
 这种情况一般情况下是显卡驱动不是最新版本造成的，建议安装最新版本的显卡驱动。
 ```
 ## 参考资料
-https://askubuntu.com/questions/799184/how-can-i-install-cuda-on-ubuntu-16-04
-http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4HIBXnwyt
-http://www.52nlp.cn/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%BB%E6%9C%BA%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-ubuntu-16-04-nvidia-gtx-1080-cuda-8#comments
+- <https://askubuntu.com/questions/799184/how-can-i-install-cuda-on-ubuntu-16-04>
+- <http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4HIBXnwyt>
+- <http://www.52nlp.cn/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%BB%E6%9C%BA%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-ubuntu-16-04-nvidia-gtx-1080-cuda-8#comments>
