@@ -14,6 +14,7 @@ toc: true
 
 下载地址： <http://sepwww.stanford.edu/doku.php?id=sep:software:installing_seplib>
 
+
 ## 安装依赖包
 
 安装 SEPlib-6.5.3，需要一些依赖包，由于笔者之前安装过 Madagascar 以及SU，因此 大部分的依赖包基本安装完毕，但还需要安装下列依赖包:
@@ -21,13 +22,18 @@ toc: true
     $ sudo apt-get install flex  # lex
     $ sudo apt-get install libpawlib-lesstif3-dev # lesstif
 
-这里需要注意的是`lesstif`包。不同版本的Debian系统可能含有的软件包不一样，具体以自己版本为主。其次，最好使用`ifort`来编译代码，在`configure`前需要显式指出下列环境变量:
+这里需要注意的是`lesstif`包。不同版本的Debian系统可能含有的软件包不一样，具体以自己版本为主。
+
+## 基础安装
+最好使用`ifort`来编译代码，在`configure`前需要显式指出下列环境变量:
 
     $ export CC=icc      # C 编译器
     $ export FC=ifort    # Fortran 编译器
     $ export CFCDEFINES=-DpgiFortran # 如果不设置此项，后面链接finitpar会出错
 
 另外，一点需要注意的是，如果使用`ifort`来编译，运行下面的命令后，需要查看`ifort`是否已经设置为Fortran编译器，这点很重要，因为一般如果将 SEPlib 安装在`/opt`下的话，需要使用`root`权限，而我们一般将`ifort`的环境变量设置在自己的用户目录下，因此`configure`时检查`ifort`会出现没有`ifort`而采用系统的一些Fortran编译器。
+
+
 
     $ ./configure --prefix=/opt/SEPlib --with-su=/su/installed/dir --with-local
 
@@ -156,12 +162,9 @@ toc: true
 
     $ source ~/.bashrc
 
-## 后续
+## 安装更多功能的SEPlib
 
 在成功安装了不带 FFTW 以及 MPI 库的 SEPlib. 下面介绍安装一个更完整的 SEPlib。
-
-
-## 安装过程
 
 由于对 SEPlib 的源代码以及整个程序框架有了更进一步的了解，所以这次选择更高级一点的安装方式。首先在安装源文件的根目录执行如下命令:
 

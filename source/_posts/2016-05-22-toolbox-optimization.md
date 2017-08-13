@@ -7,19 +7,19 @@ author: Nick
 toc: true
 ---
 
-### 下载
+## 下载
 
 下载链接: <https://seiscope2.obs.ujf-grenoble.fr/SEISCOPE-OPTIMIZATION-TOOLBOX>
 
-### 编译
+## 编译
 
 将下载的软件解压后，进入`doc/`目录下，查看manual文档进行编译。
 
-### 修改Makefile.inc
+## 修改Makefile.inc
 
 `Makefile.inc`文件位于根目录下，只需要修改与自己系统相适的编译器即可，一般情况不用作任何改动，因为其默认使用的是intel的编译器。
 
-#### Compilation
+### Compilation
 
 在根目录下，运行
 ``` {.console}
