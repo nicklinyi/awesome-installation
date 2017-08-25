@@ -27,4 +27,13 @@ cd mpich-3.2
 ```
 `configure`完成之后，直接`$ make`可编译 MPICH 源文件目录下的所有文件，接着`# make install`就可以将 MPICH 安装在指定的安装目录。
 
-注：这里我没有指定 C 和 Fortran 的编译器，因为 MPICH3.2 默认采用 Intel 的编译器来进行编译源文件，如果没有 Intel 编译器也会自动`configure`系统自带的一些编译器来进行编译，如果想手动指定编译器的话可以设置`FC`,`CC`等环境变量，然后再进行编译
+注：这里我没有指定 C 和 Fortran 的编译器，因为 MPICH3.2 默认采用 Intel 的编译器来进行编译源文件，如果没有 Intel 编译器也会自动`configure`系统自带的一些编译器来进行编译，如果想手动指定编译器的话可以设置`FC`,`CC`等环境变量，然后再进行编译。
+
+## 环境变量设置
+将下列语句添加到`$HOME/.bashrc`:
+```bash
+# MPICH 3.2
+export PATH=$PATH:/opt/mpich3.2/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/mpich3.2/lib
+```
+最后使用`$ source $HOME/.bashrc`使环境变量生效。
