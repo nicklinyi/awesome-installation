@@ -1,6 +1,6 @@
 ---
 title: SAC
-date: 2017-08-05
+date: 2015-05-16
 author: SeisMan
 categories: 地震学软件
 tags: [SAC]

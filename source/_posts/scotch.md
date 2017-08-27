@@ -1,6 +1,6 @@
 ---
 title: SCOTCH
-date: 2016-05-22 18:05:56
+date: 2017-05-22 18:05:56
 tags: SCOTCH
 categories: 数学库
 toc: true

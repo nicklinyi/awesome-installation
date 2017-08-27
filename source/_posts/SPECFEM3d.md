@@ -1,6 +1,6 @@
 ---
 title: SPECFEM3D
-date: 2017-08-25 18:13:54
+date: 2016-05-15 18:13:54
 tags: [SEM, SPECFEM3D]
 categories: 地震学软件
 toc: true
@@ -15,9 +15,9 @@ $ git clone --recursive --branch devel https://github.com/geodynamics/specfem3d.
 ```
 ## 可选依赖包
 以下安装包均为可选。
-+ [ifort编译器](../../2013/09/intel.html)，可使用gfortran代替。
-+ [mpi并行环境](../../2016/05/mpich-install.html)，可安装不带MPI加速的版本
-+ [scotch](../../2016/05/scotch.html)，安装SPECFEM3D时会自动安装其目录下绑定的scotch版本，但版本不是最新版本
++ [ifort编译器](intel.html)，可使用gfortran代替。
++ [mpi并行环境](mpich.html)，可安装不带MPI加速的版本
++ [scotch](scotch.html)，安装SPECFEM3D时会自动安装其目录下绑定的scotch版本，但版本不是最新版本
 
 
 有了上述工具之后，我们可以进入specfem3d的根目录进行安装。

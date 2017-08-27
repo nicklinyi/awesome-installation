@@ -1,6 +1,6 @@
 ---
 title: Seismic Unix
-date: 2016-05-22 18:11:00
+date: 2016-05-12 18:11:00
 tags: SU
 categories: 地震学软件
 toc: true

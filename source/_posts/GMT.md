@@ -1,6 +1,6 @@
 ---
 title: GMT
-date: 2017-08-06
+date: 2015-05-14 10:12:01
 author: SeisMan
 categories: 地震学软件
 tags: [GMT]

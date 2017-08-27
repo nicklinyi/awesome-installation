@@ -1,6 +1,6 @@
 ---
 title: SPECFEM2D
-date: 2016-05-22 18:13:54
+date: 2016-05-14 18:13:54
 tags: [SEM, SPECFEM2D]
 categories: 地震学软件
 toc: true
@@ -18,8 +18,8 @@ $ git clone --recursive --branch devel https://github.com/geodynamics/specfem2d.
 
 安装SPECFEM 2D需要安装
 
-+ [ifort编译器](../../2013/09/intel.html)
-+ [mpi并行环境](mpich-install.html)
++ [ifort编译器](intel.html)
++ [mpi并行环境](mpich.html)
 + [scotch](scotch.html)
 
 

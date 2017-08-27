@@ -19,6 +19,14 @@ toc: true
 
     $ sudo apt-get -f install
 
+## Mendeley
+Mendeley 是一个跨平台的文献管理软件,其内部自带了一个可以添加注释的 PDF 阅读器。下载链接:<https://www.mendeley.com/download-mendeley-desktop>
+    安装:
+
+        $ sudo apt-get install libqtwebkit-dev # 安装依赖包
+        $ sudo dpkg -i mendeleydesktop_1.15.1-stable_amd64.deb
+        $ cd /opt/mendeleydesktop/bin
+        $ ./install-mendeley-link-handler.sh /opt/mendeleydesktop/bin/mendeleydesktop
 
 ## 搜狗输入法
 
@@ -27,8 +35,7 @@ fcitx 框架,并安装搜狗输入法。
 
     $ sudo apt-get install fcitx
 
-与此同时,我们可以上搜狗官网下载搜狗输入法 linux 版:
-<http://pinyin.sogou.com/linux/>
+与此同时,我们可以上搜狗官网下载搜狗输入法 linux 版:<http://pinyin.sogou.com/linux/>
 下载完搜狗输入法的安装包后,我们切换至下载此安装包的目录,进行安装
 
     $ sudo dpkg -i sogoupinyin_2.1.0.0068_amd64.deb
@@ -39,14 +46,3 @@ fcitx 框架,并安装搜狗输入法。
 
 在 `Input Method` 栏中,点击 `+`, 然后选择搜狗输入法(Sogou Pinyin)。设置好后,采
 用快捷键 `Ctrl+Space` 即可调出搜狗输入法。
-
-## Mendeley
-Mendeley 是一个跨平台的文献管理软件,其内部自带了一个可以添加注释的 PDF 阅
-读器。
-下载链接:<https://www.mendeley.com/download-mendeley-desktop>
-安装:
-
-    $ sudo apt-get install libqtwebkit-dev # 安装依赖包
-    $ sudo dpkg -i mendeleydesktop_1.15.1-stable_amd64.deb
-    $ cd /opt/mendeleydesktop/bin
-    $ ./install-mendeley-link-handler.sh /opt/mendeleydesktop/bin/mendeleydesktop

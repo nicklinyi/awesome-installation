@@ -1,6 +1,6 @@
 ---
 title: ObsPy
-date: 2017-01-06 08:29:39
+date: 2015-05-15 08:29:39
 author: seispider
 categories: 地震学软件
 tags: [ObsPy,Anaconda,CentOS]

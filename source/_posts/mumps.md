@@ -27,7 +27,7 @@ toc: true
 
 -   ScaLAPACK library
 
-其中MPI一般有两种MPICH和OPENMPI，在此选择OPENMPI；至于BLAS，BLACS，ScaLAPACK这三个库可使用Intel的MKL库，因此需要安装intel的编译器。
+其中 MPI 一般有两种 MPICH 和 OPENMPI, 安装 MPICH [请点击这里](mpich.html)；至于BLAS，BLACS，ScaLAPACK 这三个库可使用 Intel 的 MKL 库，因此需要安装 intel 的编译器，[请点击这里](intel.html)。
 
 ### 解压
 
@@ -38,7 +38,7 @@ $ cd MUMPS_5.0.1
 
 ### 修改Makefile.inc
 
-安装好intel编译器后，在此可直接复制Make.inc/目录下的Makefile.INTEL.PAR文件至MUMPS的根目录，并修改一些参数使之与自己的系统相符。
+安装好intel编译器后，在此可直接复制 `Make.inc/` 目录下的 `Makefile.INTEL.PAR` 文件至 MUMPS 的根目录，并修改一些参数使之与自己的系统相符。
 
 ``` {.console}
 $ cp Make.inc/Makefile.INTEL.PAR ./Makefile.inc

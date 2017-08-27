@@ -1,6 +1,6 @@
 ---
 title: SEPlib
-date: 2016-05-19 16:45:30
+date: 2016-05-13 16:45:30
 updated: 2016-05-23 12:38:00
 author: Nick
 categories: 地震学软件

@@ -1,6 +1,6 @@
 ---
 title: Parallel Studio XE
-date: 2013-09-10
+date: 2017-08-25
 updated: 2017-08-24
 author: SeisMan
 categories: 高性能计算

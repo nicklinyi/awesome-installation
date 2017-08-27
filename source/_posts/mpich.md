@@ -1,6 +1,6 @@
 ---
 title: MPICH
-date: 2016-05-26 10:07:42
+date: 2017-08-05 10:07:42
 author: Nick
 categories: 高性能计算
 tags: MPI

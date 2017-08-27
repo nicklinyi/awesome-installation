@@ -1,6 +1,6 @@
 ---
 title: Madagascar
-date: 2016-05-22 18:12:01
+date: 2015-05-14 18:12:01
 modified: 2017-07-18 14:08:01
 tags: [RSF, Madagascar]
 categories: 地震学软件
