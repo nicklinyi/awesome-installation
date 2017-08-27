@@ -6,7 +6,8 @@ categories: 地震学软件
 toc: true
 ---
 
-Seismic Unix是Colorado School of Mines开发的一款地震数据处理软件。最新的版本代号为44R1.
+Seismic Unix是Colorado School of Mines开发的一款地震数据处理软件。最新的版本代号为44R1。
+这里选择43R8版本进行安装。
 
 下载地址：<http://www.cwp.mines.edu/cwpcodes/index.html>
 
@@ -30,13 +31,22 @@ $ sudo apt-get install gfortran
 
 ``` {.bash}
 # Seismic Unix 44R1
-export CWPROOT=/home/usrname/su
-export PATH=$PATH:/home/usrname/su/bin
+export CWPROOT=$HOME/opt/cwp
+export PATH=$PATH:$CWPROOT/bin
 ```
 
-注：usrname对读者自己的用户名。不要以root权限安装su，若造成系统不稳定，后果自负!!!
+注：`CWPROOT`为su的安装路径，请根据自己想要安装的路径确定，这里是放在了`$HOME/opt/cwp`。不要以root权限安装su，若造成系统不稳定，后果自负!!!
 
-
+## 解压
+```
+$ cd ~
+$ mkdir opt
+$ cd opt
+$ mkdir cwp
+$ cd cwp
+$ wget ftp://ftp.cwp.mines.edu/pub/cwpcodes/cwp_su_all_43R8.tgz
+$ tar -xvf cwp_su_all_43R8.tgz
+```
 
 ## 编译，安装
 编译前，可以选择修改一下`src/Makefile.config`文件。
@@ -47,6 +57,7 @@ ENDIANFLAG = -DCWP_LITTLE_ENDIAN
 LARGE_FILE_FLAG = -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE
 ```
 ``` {.console}
+$ cd src
 $ make install
 $ make xtinstall
 $ make finstall
