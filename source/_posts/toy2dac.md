@@ -20,7 +20,7 @@ toc: true
 
 - [Intel编译器](intel.html)
 - [MPI库](mpich.html)
-- [METIS](metis.html) 
+- [METIS](metis.html)
 - [MUMPS](mumps.html)
 
 
@@ -29,20 +29,36 @@ toc: true
 安装完上述依赖包后，进入`src/`，找到`Makefile.inc`文件并编辑该文件，需要修改上述库文件的`LIB`和`INC`为其安装目录。原文件需要改动的地方不多。笔者主要修改了如下几处：
 
 ``` {.makefile}
-CC = mpiicc
-FC = mpiifort
-FL = mpiifort
 
-OPTC = -03
+#ROOT DIR OF MUMPS/METIS
+LADIR = ~/software
 
-LADIR = ~/software/MUMPS_5.0.1
-LMUMPS = -L  $(LADIR)/lib -lcmumps -lmumps_common
+#ROOT DIR OF TOOL BOX
+LTOOLS_BOX = ~/software/TOOLBOX_OPTIMIZATION
 
-IPORD = -I$(LADIR)/PORD/include/
-LMETIS=  -L ~/software/metis/lib -lmetis
-LTOOLBOX= ~/software/TOOLBOX_OPTIMIZATION
+#MUMPS LIB AND INC
+LMUMPS = -L$(LADIR)/MUMPS_5.0.1/lib -lcmumps -lmumps_common
+IMUMPS = -I$(LADIR)/MUMPS_5.0.1/include
 
-INCPAR =  -I../include  $(IPORD) -I $(LADIR)/include/ $(IOPT)
+#PORD LIB (INSIDE MUMPS)
+LPORDDIR = $(LADIR)/MUMPS_5.0.1/PORD/lib/
+LPORD    = -L$(LPORDDIR) -lpord
+
+#METIS LIB
+LMETISDIR = $(LADIR)/metis/lib
+LMETIS    = -L$(LMETISDIR) -lmetis
+
+#TOOL BOX LIB AND INC
+LOPTIM = -L $(LTOOLS_BOX)/lib -lSEISCOPE_OPTIM
+IOPTIM  = -I $(LTOOLS_BOX)/COMMON/include
+
+#WE GATHER EVERYTHINGS
+LIBPAR = $(LMUMPS) $(LPORD) $(LOPTIM)  $(LMETIS)  $(LMKL)
+INCPAR = $(IMUMPS) $(IPORD) $(IOPTIM) -I../include
+
+INC = $(INCPAR)
+LIB = $(LIBPAR)
+
 ```
 
 ### Compilation

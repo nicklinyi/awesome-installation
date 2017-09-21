@@ -44,9 +44,9 @@ $ cd MUMPS_5.0.1
 $ cp Make.inc/Makefile.INTEL.PAR ./Makefile.inc
 ```
 
-由于MUMPS需要依赖与METIS或SCOTCH来划分网格，两种选一种即可，此处选择的是METIS，下载METIS并编译好METIS后，需要修改刚才的Makefile.inc文件，具体改动如下：
+由于 MUMPS 需要依赖与 METIS 或 SCOTCH 来划分网格，两种选一种即可，此处选择的是 METIS，下载 METIS 并编译好 METIS 后，需要修改刚才的`Makefile.inc`文件，具体改动如下：
 
-去掉LMETISDIR和LMETIS前的注释，并根据自己METIS的安装情况给其赋值，然后，在添加-Dmetis在ORDERINGSF之后。 例如：
+去掉`LMETISDIR`和`LMETIS`前的注释，并根据自己METIS的安装情况给其赋值，然后，在添加`-Dmetis`在`ORDERINGSF`之后。 例如：
 
 ``` {.makefile}
 LMETISDIR = ~/software/metis/lib
@@ -57,7 +57,10 @@ ORDERINGSF  = -Dpord -Dmetis
 ### Compilation
 
 ``` {.console}
-$ make
+$ make alllib
 ```
 
 编译完成后，可以在MUMPS的安装目录下发现有目录lib/,该目录主要用于链接外部函数调用此库文件。
+{% alert warning %}
+运行 `make alllib` 之后，可能会报错，错误信息为'ar: two different operation options specified'，其主要原因在于 Makefile.inc 文件中 AR 变量的设置存在问题。需要在后面补充一个空格符，即可完成正常安装。
+{% endalert %}
