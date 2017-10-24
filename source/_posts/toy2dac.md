@@ -37,11 +37,11 @@ LADIR = ~/software
 LTOOLS_BOX = ~/software/TOOLBOX_OPTIMIZATION
 
 #MUMPS LIB AND INC
-LMUMPS = -L$(LADIR)/MUMPS_5.0.1/lib -lcmumps -lmumps_common
-IMUMPS = -I$(LADIR)/MUMPS_5.0.1/include
+LMUMPS = -L$(LADIR)/MUMPS_5.1.1/lib -lcmumps -lmumps_common
+IMUMPS = -I$(LADIR)/MUMPS_5.1.1/include
 
 #PORD LIB (INSIDE MUMPS)
-LPORDDIR = $(LADIR)/MUMPS_5.0.1/PORD/lib/
+LPORDDIR = $(LADIR)/MUMPS_5.1.1/PORD/lib/
 LPORD    = -L$(LPORDDIR) -lpord
 
 #METIS LIB
