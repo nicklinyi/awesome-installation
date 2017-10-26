@@ -69,19 +69,14 @@ $ sudo ./install_GUI.sh   # 图形化界面，也可以直接执行`sudo ./insta
 
 ``` bash
 # Intel
-source /opt/intel/vtune_amplifier_xe_2017/amplxe-vars.sh quiet
-source /opt/intel/inspector_2017/inspxe-vars.sh quiet
-source /opt/intel/advisor_2017/advixe-vars.sh quiet
+source /opt/intel/vtune_amplifier_2018/amplxe-vars.sh quiet
+source /opt/intel/inspector_2018/inspxe-vars.sh quiet
+source /opt/intel/advisor_2018/advixe-vars.sh quiet
 source /opt/intel/bin/compilervars.sh intel64
 ```
 
 然后执行 `source .bashrc` 使环境变量生效。对于 csh 用户，类似。
 
-说明：2017 版本，直接 `source` 会报错:
-
-    /opt/intel/vtune_amplifier_xe_2017/amplxe-vars.sh:6: = not found
-
-这似乎是一个 bug，把 `/opt/intel/vtune_amplifier_xe_2017/amplxe-vars.sh` 第 6,8 行的 `==` 改成 `=` 即可。
 
 ## 修订历史
 
@@ -90,3 +85,4 @@ source /opt/intel/bin/compilervars.sh intel64
 -   2015-04-08：Intel 非商业软件在停止一段时间后重新接受申请；
 -   2015-07-17：学生可申请完整版开发工具（含 Fortran）；
 -   2017-08-24：更新至 parallel_studio_xe_2017；
+-   2017-10-26：更新至 parallel_studio_xe_2018；

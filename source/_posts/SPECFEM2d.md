@@ -28,7 +28,7 @@ $ git clone --recursive --branch devel https://github.com/geodynamics/specfem2d.
 ### Configuration
 
 ``` {.console}
-$ ./configure FC=ifort MPIFC=mpif90
+$ ./configure MPIFC=/opt/mpich3.2/bin/mpif90 MPI_INC=/opt/mpich3.2/include --with-mpi
 ```
 
 ### Compilation
