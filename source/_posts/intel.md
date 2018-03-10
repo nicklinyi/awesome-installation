@@ -7,7 +7,7 @@ categories: 高性能计算
 toc: ture
 tags: [安装, Intel, C, Fortran]
 ---
-本文源于[SeisMan](http://seisman.info/intel-non-commercial-software.html),介绍如何在 Linux 下安装 Parallel Studio XE 2017。
+本文源于[SeisMan](http://seisman.info/intel-non-commercial-software.html),介绍如何在 Linux 下安装 Parallel Studio XE 2018。
 
 Intel 的软件开发工具包括：C/C++ 编译器、Fortran 编译器、MKL 数学库、MPI 并行库等。
 
@@ -41,8 +41,8 @@ Intel 的软件开发工具包括：C/C++ 编译器、Fortran 编译器、MKL �
 ## 解压
 
 ``` bash
-$ tar -xvf parallel_studio_xe_2017.tgz
-$ cd parallel_studio_xe_2017
+$ tar -xvf parallel_studio_xe_2018.tgz
+$ cd parallel_studio_xe_2018
 $ sudo ./install_GUI.sh   # 图形化界面，也可以直接执行`sudo ./install.sh`
 ```
 
