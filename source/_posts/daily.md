@@ -46,3 +46,23 @@ fcitx 框架,并安装搜狗输入法。
 
 在 `Input Method` 栏中,点击 `+`, 然后选择搜狗输入法(Sogou Pinyin)。设置好后,采
 用快捷键 `Ctrl+Space` 即可调出搜狗输入法。
+
+## JDK1.8
+
+1. 上Oracle官网下载JDK1.8
+2. 把JDK安装到`/usr/lib/jvm`这个路径下。如果系统没有该路径则创建该路径。
+把下载好的压缩包文件解压到`/usr/lib/jvm`这个路径下
+```
+sudo tar zxvf jdk-8u111-linux-x64.tar.gz -C /usr/lib/jvm
+```
+3. 配置环境变量，在用户根目录下的`.bashrc`文件中追加如下内容
+```
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_111
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+```
+4. 重启终端让其生效或者在当前终端下输入 `$source ~/.bashrc`
+
+Ref:
+http://www.linuxidc.com/Linux/2013-11/93012.htm
