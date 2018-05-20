@@ -1,7 +1,7 @@
 ---
 title: Madagascar
 date: 2015-05-14 18:12:01
-modified: 2018-04-28 14:08:01
+modified: 2018-05-20 14:08:01
 tags: [RSF, Madagascar]
 categories: 地震学软件
 toc: true
@@ -47,9 +47,9 @@ $ sudo apt-get install python-epydoc
 ``` {.console}
 $ git clone https://github.com/ahay/src.git madagascar-2.0
 $ cd madagascar-2.0
-$ sudo ./configure API=c++,f90 --prefix=/opt/rsf2.0 # 额外安装C++，Fortran两个API
-$ sudo make
-$ sudo make install
+$ ./configure API=c++,f90,python,matlab --prefix=/home/lloyd/rsf2.0 # 额外安装C++，Fortran, Python, Matlab四个API
+$ make
+$ make install
 ```
 
 ### 配置环境变量
@@ -100,3 +100,6 @@ source $RSFROOT/share/madagascar/etc/env.sh
 - 2016-05-22: 初稿；
 - 2017-07-18: 更新至madagascar2.0
 - 2018-04-28: 更新macOS High Sierra下安装Madagascar
+- 2018-05-20: 更新安装Matlab API
+
+
